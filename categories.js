@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const pool = require('../db');
-const { wrap, requireFields } = require('../utils');
+const pool = require('./db');
+const { wrap, requireFields } = require('./utils');
 
 router.get('/', wrap(async (req, res) => {
   const { rows } = await pool.query('SELECT * FROM categories ORDER BY name');

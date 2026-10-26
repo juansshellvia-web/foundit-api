@@ -1,2 +1,2 @@
 // Entry point serverless untuk Vercel
-module.exports = require('../src/app');
+module.exports = require('./app');

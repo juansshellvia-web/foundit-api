@@ -8,11 +8,11 @@ app.get('/', (req, res) => {
   res.json({ message: 'FoundIt! API berjalan', version: '1.0.0' });
 });
 
-app.use('/users', require('./routes/users'));
-app.use('/categories', require('./routes/categories'));
-app.use('/locations', require('./routes/locations'));
-app.use('/reports', require('./routes/reports'));
-app.use('/claims', require('./routes/claims'));
+app.use('/users', require('./users'));
+app.use('/categories', require('./categories'));
+app.use('/locations', require('./locations'));
+app.use('/reports', require('./reports'));
+app.use('/claims', require('./claims'));
 
 app.use((req, res) => {
   res.status(404).json({ error: 'Endpoint tidak ditemukan' });

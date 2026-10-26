@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const pool = require('../db');
-const { HttpError, wrap, parseId, requireFields, REPORT_SELECT } = require('../utils');
+const pool = require('./db');
+const { HttpError, wrap, parseId, requireFields, REPORT_SELECT } = require('./utils');
 
 const findUser = async (id) => {
   const { rows } = await pool.query('SELECT * FROM users WHERE id = $1', [id]);

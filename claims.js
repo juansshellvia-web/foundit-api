@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const pool = require('../db');
-const { HttpError, wrap, parseId } = require('../utils');
+const pool = require('./db');
+const { HttpError, wrap, parseId } = require('./utils');
 
 // Setujui / tolak klaim. Jika disetujui, status laporan otomatis menjadi "sudah_dikembalikan".
 router.patch('/:id', wrap(async (req, res) => {

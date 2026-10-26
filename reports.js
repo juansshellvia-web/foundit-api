@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const pool = require('../db');
-const { HttpError, wrap, parseId, requireFields, REPORT_TYPES, REPORT_STATUSES, REPORT_SELECT } = require('../utils');
+const pool = require('./db');
+const { HttpError, wrap, parseId, requireFields, REPORT_TYPES, REPORT_STATUSES, REPORT_SELECT } = require('./utils');
 
 const statusError = () => new HttpError(400, `Status harus salah satu dari: ${REPORT_STATUSES.join(', ')}`);
 
