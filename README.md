@@ -4,7 +4,7 @@ REST API untuk platform **FoundIt!**, tempat mahasiswa melaporkan barang hilang 
 
 **Stack:** Node.js, Express, PostgreSQL (Neon/Supabase), deploy di Vercel.
 
-**URL Deployment:** https://foundit-api.vercel.app  *(ganti dengan URL Vercel kamu)*
+**URL Deployment:** https://foundit-api-three.vercel.app
 
 ## Skema Database / ERD
 
@@ -78,7 +78,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Cek Status API
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/
+- URL          : https://foundit-api-three.vercel.app/
 - Deskripsi    : Mengecek apakah API berjalan
 - Headers      : -
 - Request Body : -
@@ -96,7 +96,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Daftar Kategori
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/categories
+- URL          : https://foundit-api-three.vercel.app/categories
 - Deskripsi    : Mengambil semua kategori barang
 - Headers      : -
 - Request Body : -
@@ -118,7 +118,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Tambah Kategori
 ```
 - Method       : POST
-- URL          : https://foundit-api.vercel.app/categories
+- URL          : https://foundit-api-three.vercel.app/categories
 - Deskripsi    : Menambahkan kategori barang baru
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -142,7 +142,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Daftar Lokasi
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/locations
+- URL          : https://foundit-api-three.vercel.app/locations
 - Deskripsi    : Mengambil semua lokasi kampus
 - Headers      : -
 - Request Body : -
@@ -164,7 +164,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Tambah Lokasi
 ```
 - Method       : POST
-- URL          : https://foundit-api.vercel.app/locations
+- URL          : https://foundit-api-three.vercel.app/locations
 - Deskripsi    : Menambahkan lokasi kampus baru
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -188,7 +188,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Tambah User
 ```
 - Method       : POST
-- URL          : https://foundit-api.vercel.app/users
+- URL          : https://foundit-api-three.vercel.app/users
 - Deskripsi    : Mendaftarkan user (mahasiswa) baru
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -217,7 +217,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Daftar User
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/users
+- URL          : https://foundit-api-three.vercel.app/users
 - Deskripsi    : Mengambil semua user
 - Headers      : -
 - Request Body : -
@@ -242,7 +242,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Detail User
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/users/1
+- URL          : https://foundit-api-three.vercel.app/users/1
 - Deskripsi    : Mengambil satu user berdasarkan ID
 - Headers      : -
 - Request Body : -
@@ -265,7 +265,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Tambah Laporan Hilang
 ```
 - Method       : POST
-- URL          : https://foundit-api.vercel.app/reports/lost
+- URL          : https://foundit-api-three.vercel.app/reports/lost
 - Deskripsi    : tambahLaporanHilang() - menyimpan laporan barang hilang (status awal: masih_dicari)
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -303,7 +303,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Tambah Laporan Ditemukan
 ```
 - Method       : POST
-- URL          : https://foundit-api.vercel.app/reports/found
+- URL          : https://foundit-api-three.vercel.app/reports/found
 - Deskripsi    : tambahLaporanDitemukan() - menyimpan laporan barang yang ditemukan (status awal: sudah_ditemukan)
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -341,7 +341,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Daftar Laporan
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/reports?type=hilang&limit=10&offset=0
+- URL          : https://foundit-api-three.vercel.app/reports?type=hilang&limit=10&offset=0
 - Deskripsi    : getDataLaporan() - mengambil semua laporan. Filter opsional: type, status, category_id, location_id, user_id, q (cari kata), limit, offset
 - Headers      : -
 - Request Body : -
@@ -380,7 +380,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Cari Laporan by Kategori
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/reports?category_id=1
+- URL          : https://foundit-api-three.vercel.app/reports?category_id=1
 - Deskripsi    : cariLaporanByKategori() - memfilter laporan berdasarkan kategori
 - Headers      : -
 - Request Body : -
@@ -435,7 +435,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Detail Laporan
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/reports/1
+- URL          : https://foundit-api-three.vercel.app/reports/1
 - Deskripsi    : getLaporanById() - mengambil detail satu laporan
 - Headers      : -
 - Request Body : -
@@ -467,7 +467,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Laporan Milik User
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/users/1/reports
+- URL          : https://foundit-api-three.vercel.app/users/1/reports
 - Deskripsi    : getLaporanByUser() - semua laporan yang dibuat satu user (halaman Laporan Saya)
 - Headers      : -
 - Request Body : -
@@ -501,7 +501,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Update Laporan
 ```
 - Method       : PUT
-- URL          : https://foundit-api.vercel.app/reports/1
+- URL          : https://foundit-api-three.vercel.app/reports/1
 - Deskripsi    : Mengubah seluruh data laporan (user_id dan type tidak bisa diubah)
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -538,7 +538,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Update Status Laporan
 ```
 - Method       : PATCH
-- URL          : https://foundit-api.vercel.app/reports/1/status
+- URL          : https://foundit-api-three.vercel.app/reports/1/status
 - Deskripsi    : updateStatusLaporan() - mengubah status laporan (masih_dicari, sudah_ditemukan, sudah_dikembalikan)
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -571,7 +571,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Ajukan Klaim
 ```
 - Method       : POST
-- URL          : https://foundit-api.vercel.app/reports/2/claims
+- URL          : https://foundit-api-three.vercel.app/reports/2/claims
 - Deskripsi    : Mengajukan klaim atas laporan barang ditemukan (hanya untuk laporan type ditemukan)
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -600,7 +600,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Daftar Klaim Laporan
 ```
 - Method       : GET
-- URL          : https://foundit-api.vercel.app/reports/2/claims
+- URL          : https://foundit-api-three.vercel.app/reports/2/claims
 - Deskripsi    : Mengambil semua klaim pada satu laporan
 - Headers      : -
 - Request Body : -
@@ -627,7 +627,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Proses Klaim
 ```
 - Method       : PATCH
-- URL          : https://foundit-api.vercel.app/claims/1
+- URL          : https://foundit-api-three.vercel.app/claims/1
 - Deskripsi    : Menyetujui (approved) atau menolak (rejected) klaim. Jika approved, status laporan otomatis menjadi sudah_dikembalikan
 - Headers      : Content-Type: application/json
 - Request Body :
@@ -655,7 +655,7 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 ### Hapus Laporan
 ```
 - Method       : DELETE
-- URL          : https://foundit-api.vercel.app/reports/1
+- URL          : https://foundit-api-three.vercel.app/reports/1
 - Deskripsi    : hapusLaporan() - menghapus laporan beserta klaim terkait
 - Headers      : -
 - Request Body : -
@@ -682,7 +682,6 @@ Contoh di bawah mengasumsikan database baru dari `sql/schema.sql` dan dijalankan
 2. Di vercel.com pilih **Add New, Project**, import repository.
 3. Di **Settings, Environment Variables** tambahkan `DATABASE_URL` berisi connection string database.
 4. Deploy. Buka URL hasil deploy dan cek `GET /`.
-5. Ganti `https://foundit-api.vercel.app` di README ini dengan URL Vercel yang asli.
 
 ## Pengujian
 
